@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='languagecodess',
+    name='languagecodes',
     version='1.0.2',
     description="A library that normalises language codes",
     classifiers=[
