@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='languagecodess',
-    version='0.0.0',
+    version='1.0.0',
     description="A library that normalises language codes",
     classifiers=[
         "Development Status :: 3 - Alpha",
@@ -27,7 +27,7 @@ setup(
     install_requires=[],
     extras_require={
         'dev': [
-            'pip>=10.0.0',
+            'pip>=11.0.0',
             'bumpversion>=0.5.3',
             'wheel>=0.29.0',
             'twine',
