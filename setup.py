@@ -27,8 +27,6 @@ setup(
     install_requires=[],
     extras_require={
         'dev': [
-            'pip>=11.0.0',
-            'bumpversion>=0.5.3',
             'wheel>=0.29.0',
             'twine',
             'flake8>=2.6.0',
