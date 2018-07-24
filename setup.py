@@ -31,6 +31,7 @@ setup(
             'twine',
             'flake8>=2.6.0',
             'nose',
+            'banal',
             'coverage>=4.1'
         ]
     }

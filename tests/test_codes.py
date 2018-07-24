@@ -1,6 +1,7 @@
 from unittest import TestCase
 
 from languagecodes import iso_639_alpha3, iso_639_alpha2
+from languagecodes import list_to_alpha3
 
 
 class CodesTest(TestCase):
@@ -20,3 +21,8 @@ class CodesTest(TestCase):
         self.assertIsNone(iso_639_alpha2('banana'))
         self.assertIsNone(iso_639_alpha2('gub'))
         self.assertEquals(iso_639_alpha2('eng'), 'en')
+
+    def test_list(self):
+        assert 'srp' in list_to_alpha3('bs')
+        assert 'srp' not in list_to_alpha3('bs', synonyms=False)
+        assert 'deu' in list_to_alpha3(['bs', 'de'])
