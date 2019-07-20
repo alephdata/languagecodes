@@ -14,7 +14,7 @@ LANG_SYNONYMS = [
     ('kat', 'geo'),
     ('isl', 'ice'),
     ('isl', 'ice'),
-    ('fre', 'fra', 'frm'),
+    ('fre', 'fra'),
     ('fas', 'per'),
     ('eus', 'baq'),
     ('ell', 'gre'),
