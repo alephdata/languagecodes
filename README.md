@@ -1,6 +1,6 @@
 # languagecodes
 
-[![Build Status](https://travis-ci.org/alephdata/languagecodes.png?branch=master)](https://travis-ci.org/alephdata/languagecodes)
+![package](https://github.com/alephdata/languagecodes/workflows/package/badge.svg)
 
 This library helps to normalise the ISO 639 codes used to describe languages from
 two-letter codes to three letters, and vice versa.
