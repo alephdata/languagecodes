@@ -17,7 +17,7 @@ jobs:
         pip install -e .
     - name: Run tests
       run: |
-        python tests.py
+        nosetests --with-coverage --cover-package=languagecodes --cover-erase
     - name: Build a distribution
       run: |
         python setup.py sdist bdist_wheel
