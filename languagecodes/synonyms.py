@@ -24,6 +24,7 @@ LANG_SYNONYMS = [
     ('ces', 'cze'),
     ('bod', 'tib'),
     ('aze_cyrl', 'aze'),
+    ('fil', 'tgl'),
 ]
 
 
