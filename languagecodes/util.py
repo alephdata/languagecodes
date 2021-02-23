@@ -1,5 +1,3 @@
-
-
 def normalize_code(code):
     if code is None:
         return None

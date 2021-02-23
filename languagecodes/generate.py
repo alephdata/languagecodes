@@ -21,36 +21,35 @@ def update_data():
     iso3_map = {}
 
     path = os.path.dirname(__file__)
-    source_file = os.path.join(path, 'iso-639-3.tab')
-    with io.open(source_file, 'r', encoding='utf-8') as ufh:
-        ufh.read(1)  # BOM
-        for row in csv.DictReader(ufh, delimiter='\t'):
-            iso3 = normalize_code(row.pop('Id'))
+    source_file = os.path.join(path, "iso-639-3.tab")
+    with io.open(source_file, "r", encoding="utf-8") as ufh:
+        for row in csv.DictReader(ufh, delimiter="\t"):
+            iso3 = normalize_code(row.pop("Id"))
             if iso3 is None:
                 continue
             iso3_ids.add(iso3)
 
-            part1 = normalize_code(row.pop('Part1'))
+            part1 = normalize_code(row.pop("Part1"))
             if part1 is not None:
                 iso3_map[part1] = iso3
                 iso2_map[iso3] = part1
 
-            part2b = normalize_code(row.pop('Part2B'))
+            part2b = normalize_code(row.pop("Part2B"))
             if part2b is not None:
                 iso3_map[part2b] = iso3
 
-            part2t = normalize_code(row.pop('Part2T'))
+            part2t = normalize_code(row.pop("Part2T"))
             if part2t is not None:
                 iso3_map[part2t] = iso3
 
-            ref_name = normalize_code(row.pop('Ref_Name'))
+            ref_name = normalize_code(row.pop("Ref_Name"))
             if ref_name is not None:
                 iso3_map[ref_name] = iso3
 
             # print(row)
 
-    code_file = os.path.join(path, 'iso639.py')
-    with io.open(code_file, 'w', encoding='utf-8') as ofh:
+    code_file = os.path.join(path, "iso639.py")
+    with io.open(code_file, "w", encoding="utf-8") as ofh:
         data = TEMPLATE % (list(iso3_ids), iso3_map, iso2_map)
         ofh.write(data)
 
@@ -68,5 +67,5 @@ def update_data():
     #     print(iso3, iso2)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     update_data()
