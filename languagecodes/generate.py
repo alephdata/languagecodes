@@ -43,14 +43,14 @@ def update_data():
                 iso3_map[part2t] = iso3
 
             ref_name = normalize_code(row.pop("Ref_Name"))
-            if ref_name is not None:
+            if ref_name is not None and len(ref_name) > 3:
                 iso3_map[ref_name] = iso3
 
             # print(row)
 
     code_file = os.path.join(path, "iso639.py")
     with io.open(code_file, "w", encoding="utf-8") as ofh:
-        data = TEMPLATE % (list(iso3_ids), iso3_map, iso2_map)
+        data = TEMPLATE % (list(sorted(iso3_ids)), iso3_map, iso2_map)
         ofh.write(data)
 
     # doc = html.fromstring(res.content)
