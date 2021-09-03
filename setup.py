@@ -1,4 +1,4 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 
 setup(
     name="languagecodes",
@@ -19,9 +19,10 @@ setup(
     author_email="friedrich@pudo.org",
     url="http://github.com/alephdata/languagecodes",
     license="MIT",
-    packages=find_packages(exclude=["ez_setup", "examples", "test"]),
+    packages=["languagecodes"],
     namespace_packages=[],
     include_package_data=True,
+    package_data={"languagecodes": ["py.typed"]},
     zip_safe=False,
     test_suite="nose.collector",
     install_requires=[],
@@ -29,6 +30,7 @@ setup(
         "dev": [
             "wheel>=0.29.0",
             "twine",
+            "mypy",
             "flake8>=2.6.0",
             "nose",
             "banal",

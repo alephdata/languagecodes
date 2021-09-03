@@ -1,6 +1,9 @@
 # This is a set of synonyms for pragmatic usage in NLP. It is based on
 # working with Tesseract 3.04, but should be applicable elsewhere.
 
+from typing import Iterable
+
+
 LANG_SYNONYMS = [
     ("srp", "hbs", "hrv", "bos"),
     ("sli", "alb"),
@@ -30,7 +33,7 @@ LANG_SYNONYMS = [
 ]
 
 
-def expand_synonyms(language):
+def expand_synonyms(language: str) -> Iterable[str]:
     """Expand a language code into a set of codes."""
     for synonyms in LANG_SYNONYMS:
         if language in synonyms:
