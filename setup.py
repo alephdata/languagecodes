@@ -1,9 +1,15 @@
 from setuptools import setup
 
+with open("README.md") as f:
+    long_description = f.read()
+
+
 setup(
     name="languagecodes",
     version="1.0.9",
     description="A library that normalises language codes",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Intended Audience :: Developers",
@@ -22,7 +28,7 @@ setup(
     packages=["languagecodes"],
     namespace_packages=[],
     include_package_data=True,
-    package_data={"languagecodes": ["py.typed"]},
+    package_data={"languagecodes": ["py.typed", "iso-639-3.tab"]},
     zip_safe=False,
     test_suite="nose.collector",
     install_requires=[],
