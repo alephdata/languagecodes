@@ -31,7 +31,7 @@ setup(
     package_data={"languagecodes": ["py.typed", "iso-639-3.tab"]},
     zip_safe=False,
     test_suite="nose.collector",
-    install_requires=[],
+    install_requires=["banal >= 1.0.0, < 2.0.0"],
     extras_require={
         "dev": [
             "wheel>=0.29.0",
@@ -39,7 +39,6 @@ setup(
             "mypy",
             "flake8>=2.6.0",
             "nose",
-            "banal",
             "coverage>=4.1",
         ]
     },
