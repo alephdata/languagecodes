@@ -6,7 +6,7 @@ with open("README.md") as f:
 
 setup(
     name="languagecodes",
-    version="1.1.0",
+    version="1.1.1",
     description="A library that normalises language codes",
     long_description=long_description,
     long_description_content_type="text/markdown",
