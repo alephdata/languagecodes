@@ -1,23 +1,7 @@
 # languagecodes
 
-![package](https://github.com/alephdata/languagecodes/workflows/package/badge.svg)
+**NOTICE** The functionality contained in `languagecoes` is now maintained as part of `rigour`, which combines data validation for several `followthemoney`-related data formats. See https://opensanctions.github.io/rigour/langs/ for details. 
 
-This library helps to normalise the ISO 639 codes used to describe languages from
-two-letter codes to three letters, and vice versa.
+## License
 
-```python
-import languagecodes
-
-assert 'eng' == languagecodes.iso_639_alpha3('en')
-assert 'eng' == languagecodes.iso_639_alpha3('ENG ')
-assert 'en' == languagecodes.iso_639_alpha2('ENG ')
-```
-
-You can install the library from the Python package index:
-
-```bash
-pip install languagecodes
-```
-
-Uses data from: https://iso639-3.sil.org/
-See also: https://www.loc.gov/standards/iso639-2/php/code_list.php
+Licensed under MIT terms, see the ``LICENSE`` file included in this repository.
